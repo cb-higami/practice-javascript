@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = 'http://coinbaby8.com/udemy_js_api/api/udemy_js';
+        const options = {
+            method: "GET"
+        }
+
+        const getFormData = fetch(url, options) 
+            .then(response => response.json());
+        console.log(getFormData)
+    </script>
+</body>
+</html>

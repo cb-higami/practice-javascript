@@ -1,0 +1,37 @@
+ブラウザもオブジェクト
+
+window.xxx
+
+//戻る、進むボタン
+window.history
+
+//URL
+window.location
+
+
+//document
+// document.getElementById と同じ
+window.document
+
+
+たまにやってしまう
+document.getElementById()[0] とは何なのか？
+    ->document.querySelectorAll('.test_list')の結果
+
+
+Promise
+    例外として使用する？
+    callBack地獄を抜け出すために使用？
+        resolve().then().then()...
+    プロパティ、メソッド、状態（OK、NG）、結果の値を持つ
+
+    非同期
+        処理
+            callBack, promise, async, await
+        通信（Ajax）
+            fetch
+
+    //async をつけるだけで、promise にラップされる
+    async function testAsync() {
+        return '非同期関数';
+    }

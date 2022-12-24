@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .bule {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    inline 要素：横並びになるタグ
+    <p>aaaa</p>
+    <p>aaaa</p>
+    <p>aaaa</p>
+
+    <span>span</span>
+
+    ブロック要素：改行するタグ
+    <div id="test">testttt
+        <ul>
+            <li class="test_list">test1</li>
+            <li class="test_list">test2</li>
+            <li class="test_list bule">test3</li>
+
+        </ul>
+
+    </div>
+    <input type="button" value="aaaaaaaaa" id="magic_input">
+
+    <script>
+        const test = document.getElementById('test');
+        console.log(test)
+
+        test.classList.add('red');
+
+        const tests = document.querySelectorAll('.test_list');
+        tests[0].classList.add('bule')
+
+        const inputTag = document.getElementById('magic_input');
+        inputTag.value = "fffffffff";
+        inputTag.type = 'password'
+        // inputTag.setAttribute('value', 'ffffijijij')
+        // inputTag.setAttribute('type', 'radio');
+
+        const anchor = document.createElement('a');
+        anchor.href = 'aaaaaa'
+        anchor.textContent='fjkjkjkjlkjlkjkljkljskljdfkj'
+        test.appendChild(anchor)
+
+    </script>
+</body>
+</html>

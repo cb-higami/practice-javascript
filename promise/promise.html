@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function promiseTest1() {
+            return new Promise( (ok, ng) => {
+                ok('promise 1')
+                // ng('ngggg')
+            })
+        }
+
+        console.log(promiseTest1())
+
+        function promiseTest3(input) {
+            return new Promise( ok => {
+                ok(`プロミス${input}です`)
+            })
+        }
+
+        console.log(promiseTest3('taro'))
+
+
+        function promiseTest4 (pay) {
+            return new Promise( (ok, ng) => {
+                if(pay > 100) {
+                    let change = pay -100
+                    ok(change);
+                } 
+                ng('お金が足りません')
+            })
+        }
+
+        console.log(promiseTest4(300))
+
+        let test = promiseTest4(200).then( change => {
+            console.log(change)
+            // return change * 200
+            return promiseTest4(change)
+        }).then( c => {
+            console.log(c)
+        }).catch (c => {
+            console.log(c)
+        })
+
+
+
+    </script>
+    
+</body>
+</html>
